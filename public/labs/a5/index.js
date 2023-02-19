@@ -11,6 +11,7 @@ console.log(blockScoped);
 const constant1 = global1
                   + functionScoped
                   - blockScoped;
+console.log(constant1);
 
 console.log('Variable types');
 let numberVariable = 123;
@@ -91,7 +92,9 @@ console.log(threePlusOne);
 
 console.log('Arrays')
 let numberArray1 = [1, 2, 3, 4, 5];
+console.log(numberArray1)
 let stringArray1 = ['string1', 'string2'];
+console.log(stringArray1);
 let variableArray1 = [
     functionScoped,
     blockScoped,
