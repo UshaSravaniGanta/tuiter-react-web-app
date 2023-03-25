@@ -7,14 +7,14 @@ const NavigationSidebar = () => {
     const paths = pathname.split('/')
     const active = paths[2];
     return (
-        <div className="list-group mt-2">
+        <div className="list-group">
             <Link to="#" className="list-group-item">Tuiter</Link>
             <Link to="/" className="list-group-item">
                 Labs
             </Link>
             <Link to="/tuiter/home"
-                  className={`list-group-item list-group-item-action ${active === 'home' ? 'active'
-                                                                                         : ''}`}>
+                  className={`list-group-item list-group-item-action ${active === 'home' || active ==='' ? 'active'
+                                                                                                         : ''}`}>
                 <i className="fa fa-home col-xxl-2 col-xl-2"></i>
                 Home
             </Link>
@@ -43,8 +43,8 @@ const NavigationSidebar = () => {
                 <i className="fa fa-list col-xxl-2 col-xl-2"></i>
                 Lists
             </Link>
-            <Link to="#" className={`list-group-item list-group-item-action
-                    ${active === 'profile' ? 'active' : ''}`}>
+            <Link to="/tuiter/profile" className={`list-group-item list-group-item-action
+                    ${active === 'profile' ? 'active' : active ==='edit-profile' ? 'active' : ''}`}>
                 <i className="fa fa-user col-xxl-2 col-xl-2"></i>
                 Profile
             </Link>
